@@ -23,7 +23,7 @@ export const postData = data => dispatch => {
   dispatch({ type: POST_DATA_START });
   axiosWithAuth()
     .post('/friends', data)
-    .then(() => dispatch({ type: POST_DATA_SUCCESS }))
+    .then(res => dispatch({ type: POST_DATA_SUCCESS }))
     .catch(err =>
       dispatch({ type: POST_DATA_FAILURE, payload: err.response.message }),
     );

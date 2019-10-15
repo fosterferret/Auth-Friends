@@ -36,7 +36,6 @@ export default function Login(props) {
           type="text"
           name="username"
           placeholder="enter username"
-          autoComplete="off"
           value={loginInfo.username}
           onChange={handleChange}
         />
@@ -44,7 +43,6 @@ export default function Login(props) {
           type="password"
           name="password"
           placeholder="enter password"
-          autoComplete="off"
           value={loginInfo.password}
           onChange={handleChange}
         />

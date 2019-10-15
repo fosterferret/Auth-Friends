@@ -1,12 +1,20 @@
-import React from "react";
-import AddFriend from "./AddFriend";
-import Friends from "./Friends";
+import React from 'react';
+import { Route, Redirect } from 'react-router-dom';
 
-export default function Display() {
+const PrivateRoute = ({ component: Component, ...rest }) => {
   return (
-    <div className = "friends-container">
-      <AddFriend />
-      <Friends />
-    </div>
+    <Route
+      {...rest}
+      render={props =>
+        localStorage.getItem('token') ? (
+          <Component {...props} />
+        ) : (
+          <Redirect to='/login' />
+        )
+      }
+    />
   );
-}
+};
+
+export default PrivateRoute;
+
