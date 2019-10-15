@@ -4,7 +4,7 @@ import Friends from "./Friends";
 
 export default function Display() {
   return (
-    <div>
+    <div className = "friends-container">
       <AddFriend />
       <Friends />
     </div>
