@@ -31,7 +31,7 @@ export default function AddFriend() {
         />
         <input
           type='text'
-          name='age'
+          name='nickname'
           placeholder='Nickname'
           onChange={handleChange}
         />
